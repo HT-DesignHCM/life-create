@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/*==================================================================
+	Fonts setting
+===================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap');
+
+.poppins { font-family: 'Poppins', sans-serif; }
+.noto    { font-family: 'Noto Serif JP', serif;}
+
+/*==================================================================
+	Style setting
+===================================================================*/
+html {
+	font-size: 62.5%;
+	overflow-x:hidden;
+}
+body {
+	background: #FFF;
+	color: #333;
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+	font-size: 1.5rem;
+	overflow-x:hidden;
+	-webkit-text-size-adjust:none;
+	-ms-text-size-adjust:none;
+	word-wrap:break-word;
+}
+a { color: #333; text-decoration: none; }
+a:hover { color: #333; text-decoration: none; }
+.container {
+	margin: auto;
+	max-width: 1400px;
+}
+@media screen and (max-width: 1400px){
+	.container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+@media screen and (min-width: 768px){
+	.sp_only {
+		display: none!important;
+	}	
+}
+@media screen and (max-width: 767px){
+	.pc_only {
+		display: none!important;
+	}	
+}
