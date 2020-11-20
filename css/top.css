@@ -1,4 +1,40 @@
 @charset "UTF-8";
 /*==================================================================
-	Style setting
+	Keyv setting
 ===================================================================*/
+#keyv { position: relative; }
+#keyv > img { width: 100%; }
+#keyv .ttl {
+	margin: 0 auto;
+	max-width: 1400px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 170px;
+	z-index: 10;
+}
+#keyv .ttl img { width: 826px; }
+
+#keyv .scroll {
+	margin: 0 auto;
+	width: 50px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	z-index: 10;
+}
+#keyv .scroll {
+    animation: scrollDown 1.5s infinite linear;
+}
+@-webkit-keyframes scrollDown {
+    0% {  }
+    50% { transform: translateY(-15px); }
+    100% { }
+}
+@keyframes scrollDown {
+    0% {  }
+    50% { transform: translateY(-15px); }
+    100% { }
+}

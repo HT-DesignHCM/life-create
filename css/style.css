@@ -38,12 +38,177 @@ a:hover { color: #333; text-decoration: none; }
 	}
 }
 @media screen and (min-width: 768px){
-	.sp_only {
+	.sp-only {
 		display: none!important;
 	}	
 }
 @media screen and (max-width: 767px){
-	.pc_only {
+	.pc-only {
 		display: none!important;
 	}	
+}
+
+/*==================================================================
+	Header setting
+===================================================================*/
+#header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+#logo {
+	padding-left: 50px;
+	width: auto;
+}
+#gnav .nav-item .en, #gnav .nav-item .jp {
+	display: block;
+	line-height: 1.4;
+	text-align: center;
+}
+#gnav {
+	display: flex;
+	width: auto;
+}
+#gnav ul {
+	display: flex;
+	padding-right: 25px;
+}
+#gnav ul li {
+	padding: 0 40px;
+	position: relative;
+}
+#gnav ul li:not(:last-child):after {
+	content: "";
+	background: #ABABAB;
+	display: inline-block;
+	height: 50px;
+	width: 1px;
+	position: absolute;
+	right: -5px;
+	top: 50%;
+	transform: translateY(-50%) rotate(38deg);
+}
+#gnav .nav-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 90px;
+	transition: all ease-in-out 0.25s;
+}
+#gnav .nav-item:hover .en {
+	color: #EB031C;
+}
+#gnav .nav-item .en {
+	font-size: 2.2rem;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+}
+#gnav .nav-item .jp {
+	font-size: 1.2rem;
+	letter-spacing: -0.1em;
+}
+#gnav .btn-entry a {
+	background: #EB031C;
+	width: 260px;
+}
+#gnav .btn-entry a:hover { opacity: 0.75; }
+#gnav .btn-entry a, #gnav .btn-entry .en {
+	color: #FFF!important;
+	transition: all ease-in-out 0.25s;
+}
+#gnav .btn-entry .en { font-size: 2rem; }
+
+/*==================================================================
+	Footer setting
+===================================================================*/
+#footer {
+	background: #333;
+	color: #FFF;
+}
+#footer .fsection {
+	display: flex;
+	justify-content: space-between;
+	padding: 65px 0;
+}
+#footer .fcontact .name {
+	font-weight: bold;
+	font-size: 2rem;
+	margin: 20px 0;
+}
+#footer .fcontact .info {
+	font-size: 1.2rem;
+	line-height: 2;
+}
+#footer #fnav {
+	display: flex;
+}
+#footer #fnav .col-nav {
+	width: 220px;
+}
+#footer #fnav .col-nav:last-child {
+	width: 165px;
+}
+#footer #fnav .fnav-ttl {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+#footer .fcontact a,
+#footer #fnav .fnav-item,
+#footer #fnav .fnav-item-other {
+	color: #FFF;
+}
+#footer #fnav .fnav-item:hover,
+#footer #fnav .fnav-item-other:hover {
+	text-decoration: underline;
+}
+#footer #fnav .fnav-item {
+	font-size: 1.2rem;
+	position: relative;
+	padding-left: 18px;
+}
+#footer #fnav .fnav-item:before {
+	content: "";
+	border-top: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	height: 3px;
+	width: 3px;
+	position: absolute;
+	left: 0;
+	top: 5px;
+	transform: rotate(45deg);
+}
+#footer #fnav .fnav-item-other {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+#footer #fnav ul li {
+	margin-bottom: 15px;
+}
+#footer #fnav .other {
+	margin-top: 5px;
+	padding-bottom: 12px;
+}
+#footer .fconnect {
+	border-top: 1px solid #707070;
+	padding: 40px 0;
+}
+#footer .fconnect .two-col {
+	display: flex;
+}
+#footer .fconnect ul {
+	display: flex;
+}
+#footer .fconnect ul li {
+	font-size: 1rem;
+	line-height: 2;
+	margin-right: 34px;
+}
+#copyright {
+	border-top: 1px solid #707070;
+	font-size: 1rem;
+	padding: 10px 0;
+	text-align: center;
 }
