@@ -48,6 +48,15 @@ a:hover { color: #333; text-decoration: none; }
 		display: none!important;
 	}	
 }
+.fadeup {
+	opacity: 0;
+	transform: translateY(20px);
+	transition-duration: 1s;
+}
+.fadeup.on {
+	opacity: 1;
+	transform: translateY(0);
+}
 
 /*==================================================================
 	Header setting
@@ -120,6 +129,7 @@ a:hover { color: #333; text-decoration: none; }
 	font-size: 2.2rem;
 	font-weight: bold;
 	letter-spacing: 0.1em;
+	text-transform: uppercase;
 }
 #gnav .nav-item .jp {
 	font-size: 1.2rem;
@@ -134,7 +144,7 @@ a:hover { color: #333; text-decoration: none; }
 	color: #FFF!important;
 	transition: all ease-in-out 0.25s;
 }
-#gnav .btn-entry .en { font-size: 2rem; }
+#gnav .btn-entry .en { font-size: 2rem; text-transform: uppercase; }
 
 @media screen and (max-width: 767px){
 	#open-menu {
@@ -272,7 +282,7 @@ a:hover { color: #333; text-decoration: none; }
 		display: block;
 		margin: 25px auto 50px;
 		max-width: 300px;
-		padding: 15px;
+		padding: 26px 15px;
 		text-align: center;
 	}
 	#sp-nav .entry a .en,
@@ -280,9 +290,10 @@ a:hover { color: #333; text-decoration: none; }
 		color: #EB031C;
 		display: block;
 		line-height: 1.2;
+		font-weight: bold;
 	}
-	#sp-nav .entry a .en { font-size: 2.5em; }
-	#sp-nav .entry a .jp { font-size: 1.2em; }
+	#sp-nav .entry a .en { font-size: 2.5rem; }
+	#sp-nav .entry a .jp { font-size: 1.2rem; }
 	#sp-nav .close { text-align: center; }
 	#sp-nav .close a {
 		color: #FFF;
@@ -337,6 +348,7 @@ a:hover { color: #333; text-decoration: none; }
 	font-weight: bold;
 	pointer-events: none;
 	margin-bottom: 15px;
+	text-transform: uppercase;
 }
 #footer .fcontact a,
 #footer #fnav .fnav-item,
@@ -496,3 +508,112 @@ a:hover { color: #333; text-decoration: none; }
 	#footer .fconnect .two-col { display: block; }
 	#footer .fconnect ul li { margin-right: 0; }
 }
+
+/*==================================================================
+	Headlines setting
+===================================================================*/
+.headline01 {
+	margin-bottom: 50px;
+	text-align: center;
+}
+.headline01 .en,
+.headline01 .jp {
+	display: block;
+	line-height: 1.4;
+}
+.headline01 .en {
+	color: #EB031C;
+	font-size: 6rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+.headline01 .jp {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+/*==================================================================
+	Buttons setting
+===================================================================*/
+.btn {
+	color: #FFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80px;
+	max-width: 430px;
+	margin: 0 auto;
+	position: relative;
+	text-decoration: none;
+}
+.btn > span { position: relative; z-index: 1; }
+.btn:after {
+	background: transparent;
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transform-origin: right top;
+	-ms-transform-origin: right top;
+	transform-origin: right top;
+	transform: scale(0,1);
+	-webkit-transition: -webkit-transform .3s;
+	transition: -webkit-transform .3s;
+	transition: transform .3s;
+	z-index: 0;
+}
+.btn:hover:after {
+	-webkit-transform-origin: left top;
+	-ms-transform-origin: left top;
+	transform-origin: left top;
+	-webkit-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	transform: scale(1,1);
+}
+.btn .arrow {
+	background: #FFF;
+	display: block;
+	height: 1px;
+	width: 30px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	z-index: 1;
+}
+.btn .arrow:before {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	left: 100%;
+	z-index: 9;
+}
+.btn .arrow:after {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 10px;
+	position: absolute;
+	left: 50px;
+	top: -3px;
+	transform: rotate(30deg);
+	z-index: 9;
+}
+/* arrow red */
+.btn.red { background: #EB031C; }
+.btn.red:after { background: #333; }
+.btn.red .arrow:before, .btn.red .arrow:after { background: #EB031C; transition: all ease 0.25s; }
+.btn.red:hover { color: #FFF; }
+.btn.red:hover .arrow:before, .btn.red:hover .arrow:after { background: #333; }
+
+/* arrow white */
+.btn.white { background: #FFF; color: #333; }
+.btn.white:after { background: #333; }
+.btn.white .arrow:before, .btn.white .arrow:after { background: #333; transition: all ease 0.25s; }
+.btn.white:hover { color: #FFF; }
+.btn.white:hover .arrow:before, .btn.white:hover .arrow:after { background: #333; }

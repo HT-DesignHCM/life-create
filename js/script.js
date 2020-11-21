@@ -15,6 +15,21 @@
 			$('.navi').removeClass('on');
 		});
 	}
+	/* jsEffect
+	--------------------------------------------------*/
+	var jsEffect = function(){
+		$(window).on('scroll load', function(){
+			var
+			sc = $(window).scrollTop(),
+			wh = window.innerHeight;
+			$('.fadeup, .effect').each(function(index, el) {
+				var pos = $(this).offset().top;
+				if(pos<sc+wh*0.8){
+					$(this).addClass('on');
+				}
+			});
+		});
+	}
 
 	/* jsFixed
 	--------------------------------------------------*/
@@ -75,8 +90,9 @@
 	/* Dom Ready
 	--------------------------------------------------*/
 	jsAnchors();
+	jsEffect();
 	jsFixed();
 	jsMenu();
 	jsMenuFooter();
-
+	$('.matchHeight').matchHeight();
 })(jQuery);
