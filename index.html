@@ -4,9 +4,15 @@
 <meta charset="UTF-8">
 <meta name="description" content="{[#SITE_DESCRIPTION#]}">
 <meta name="keywords" content="{[#SITE_KEYWORDS#]}">
-<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=0">
 <meta name="format-detection" content="telephone=no">
 <title>[#SITE_TITLE#]}</title>
+<script type="text/javascript">
+	if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+		document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
+	}else{
+		document.write('<meta name="viewport" content="width=1400">');
+	}
+</script>
 <link rel="stylesheet" href="css/normalize.css" media="all">
 <link rel="stylesheet" href="css/style.css" media="all">
 <link rel="stylesheet" href="css/top.css" media="all">
@@ -23,6 +29,51 @@
 				<li><a href="interview/" class="nav-item"><span class="en poppins">INTERVIEW</span><span class="jp">先輩インタビュー</span></a></li>
 			</ul>
 			<div class="btn-entry"><a href="entry/" class="nav-item"><span class="en poppins">ENTRY</span><span class="jp">エントリー</span></a></div>
+		</nav>
+		<div id="open-menu" class="sp-only">
+			<span>-</span>
+		</div>
+		<nav id="sp-nav" class="sp-only">
+			<div class="sp-nav-inner">
+				<ul class="main-nav">
+					<li>
+						<p><a href="javascript:void(0);" class="sp-nav-parent has-sub poppins">ABOUT</a></p>
+						<ul class="sp-nav-sub">
+							<li><a href="about/index.html" class="sp-nav-item">経営ビジョン</a></li>
+							<li><a href="about/message.html" class="sp-nav-item">代表メッセージ</a></li>
+							<li><a href="about/company.html" class="sp-nav-item">会社概要、沿革</a></li>
+						</ul>
+					</li>
+					<li>
+						<p><a href="javascript:void(0);" class="sp-nav-parent has-sub poppins">BUSINESS</a></p>
+						<ul class="sp-nav-sub">
+							<li><a href="business/index.html" class="sp-nav-item">事業紹介</a></li>
+							<li><a href="business/future.html" class="sp-nav-item">これからのライフクリエイト</a></li>
+						</ul>
+					</li>
+					<li>
+						<p><a href="interview/" class="sp-nav-parent poppins">INTERVIEW</a></p>
+					</li>
+					<li>
+						<p><a href="javascript:void(0);" class="sp-nav-parent has-sub poppins">RECRUIT</a></p>
+						<ul class="sp-nav-sub">
+							<li><a href="recruit/index.html" class="sp-nav-item">求める人物像</a></li>
+							<li><a href="recruit/information.html" class="sp-nav-item">求人情報一覧</a></li>
+							<li><a href="recruit/detail.html" class="sp-nav-item">エントリーフォーム</a></li>
+						</ul>
+					</li>
+					<li>
+						<p><a href="news/" class="sp-nav-parent poppins">NEWS</a></p>
+					</li>
+				</ul>
+				<ul class="other-nav">
+					<li><a href="contact/" class="sp-nav-other">お問い合せ</a></li>
+					<li><a href="privacy/" class="sp-nav-other">個人情報保護方針</a></li>
+					<li><a href="training/" class="sp-nav-other">工具研修声募集</a></li>
+				</ul>
+				<p class="entry"><a href="entry/"><span class="en poppins">ENTRY</span><span class="jp">エントリー</span></a></p>
+				<p class="close"><a href="javascript:void(0);" id="close-menu" class="poppins">CLOSE</a></p>
+			</div>
 		</nav>
 	</header><!-- #header -->
 
@@ -47,35 +98,35 @@
 				</div>
 				<nav id="fnav">
 					<div class="col-nav">
-						<p class="fnav-ttl poppins">ABOUT</p>
-						<ul>
-							<li><a href="about/" class="fnav-item">経営ビジョン</a></li>
-							<li><a href="about/" class="fnav-item">代表メッセージ</a></li>
-							<li><a href="about/" class="fnav-item">会社概要、沿革</a></li>
+						<p class="fnav-ttl fnav-parent poppins">ABOUT</p>
+						<ul class="fnav-sub">
+							<li><a href="about/index.html" class="fnav-item">経営ビジョン</a></li>
+							<li><a href="about/message.html" class="fnav-item">代表メッセージ</a></li>
+							<li><a href="about/company.html" class="fnav-item">会社概要、沿革</a></li>
 						</ul>
 					</div>
 					<div class="col-nav">
-						<p class="fnav-ttl poppins">BUSINESS</p>
-						<ul>
-							<li><a href="business/" class="fnav-item">事業紹介</a></li>
-							<li><a href="business/" class="fnav-item">これからのライフクリエイト</a></li>
+						<p class="fnav-ttl fnav-parent poppins">BUSINESS</p>
+						<ul class="fnav-sub">
+							<li><a href="business/index.html" class="fnav-item">事業紹介</a></li>
+							<li><a href="business/future.html" class="fnav-item">これからのライフクリエイト</a></li>
 						</ul>
-						<p class="fnav-ttl poppins pt20">INTERVIEW</p>
-						<ul>
-							<li><a href="interview/" class="fnav-item">先輩の声</a></li>
-						</ul>
-					</div>
-					<div class="col-nav">
-						<p class="fnav-ttl poppins">RECRUIT</p>
-						<ul>
-							<li><a href="recruit/" class="fnav-item">求める人物像</a></li>
-							<li><a href="recruit/" class="fnav-item">求人情報一覧</a></li>
-							<li><a href="recruit/" class="fnav-item">エントリーフォーム</a></li>
+						<p class="fnav-ttl fnav-parent poppins pt20">INTERVIEW</p>
+						<ul class="fnav-sub">
+							<li><a href="interview/index.html" class="fnav-item">先輩の声</a></li>
 						</ul>
 					</div>
 					<div class="col-nav">
-						<p class="fnav-ttl poppins">NEWS</p>
-						<ul>
+						<p class="fnav-ttl fnav-parent poppins">RECRUIT</p>
+						<ul class="fnav-sub">
+							<li><a href="recruit/index.html" class="fnav-item">求める人物像</a></li>
+							<li><a href="recruit/information.html" class="fnav-item">求人情報一覧</a></li>
+							<li><a href="recruit/detail.html" class="fnav-item">エントリーフォーム</a></li>
+						</ul>
+					</div>
+					<div class="col-nav">
+						<p class="fnav-ttl fnav-parent poppins">NEWS</p>
+						<ul class="fnav-sub">
 							<li><a href="news/" class="fnav-item">採用情報</a></li>
 							<li><a href="news/" class="fnav-item">社会貢献</a></li>
 							<li><a href="news/" class="fnav-item">社内イベント</a></li>
@@ -83,9 +134,11 @@
 						</ul>
 					</div>
 					<div class="col-nav">
-						<p class="other"><a href="contact/" class="fnav-item-other">お問い合せ</a></p>
-						<p class="other"><a href="privacy/" class="fnav-item-other">個人情報保護方針</a></p>
-						<p class="other"><a href="training/" class="fnav-item-other">工具研修声募集</a></p>
+						<ul class="fnav-other">
+							<li><a href="contact/" class="fnav-item-other">お問い合せ</a></li>
+							<li><a href="privacy/" class="fnav-item-other">個人情報保護方針</a></li>
+							<li><a href="training/" class="fnav-item-other">工具研修声募集</a></li>
+						</ul>
 					</div>
 				</nav>
 			</div><!-- .fsection -->

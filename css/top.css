@@ -38,3 +38,18 @@
     50% { transform: translateY(-15px); }
     100% { }
 }
+@media screen and (max-width: 1400px){
+	#keyv .ttl {
+		bottom: 130px;
+		padding: 0 185px;
+	}
+	#keyv .ttl img { width: 590px; }
+}
+@media screen and (max-width: 767px){
+	#keyv .ttl {
+		left: 25px;
+		bottom: 35px;
+		padding: 0;
+	}
+	#keyv .ttl img { width: 278px; }
+}
