@@ -62,7 +62,7 @@
 	padding: 120px 0 0;
 }
 .txt-slogan {
-	border-bottom: 1px dotted #999;
+	border-bottom: 2px dotted #999;
 	font-size: 4rem;
 	line-height: 1.8;
 	max-width: 1082px;
@@ -72,10 +72,12 @@
 }
 .target {
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	margin-bottom: 100px;
 }
 .target .info {
-	margin-left: auto;
+	max-width: 630px;
 	width: 45%;
 }
 .target .ttl {
@@ -92,8 +94,7 @@
 }
 .target .txt { margin-bottom: 110px; }
 .target .img {
-	margin-left: -18%;
-	width: 65%;
+	width: 55%;
 }
 .philosophy {
 	background: url(../imgs/top/bg_philosophy.jpg) no-repeat center center;
@@ -107,8 +108,8 @@
 	background: #FFF;
 	border-radius: 4px;
 	margin-bottom: 50px;
-	padding: 42px 70px;
-	width: 71.5%;
+	padding: 42px 70px 50px;
+	max-width: 1000px;
 }
 .list-philosophy li:nth-child(even) {
 	margin-left: auto;
@@ -162,6 +163,19 @@
 /*----sec-business-------------------------------------------------*/
 .sec-business {
 	padding: 100px 0;
+	position: relative;
+}
+.sec-business:after {
+	background: #EEE;
+	content: "";
+	display: block;
+	height: 100%;
+	max-height: 450px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
 }
 .list-business {
 	display: flex;
@@ -207,10 +221,249 @@
 	margin-bottom: 18px;
 }
 .list-business li .btn {
-	border: 1px solid #333;
 	font-size: 1.3rem;
 	max-width: 250px;
 	height: 60px;
 }
 .list-business li .btn .arrow { width: 15px; }
-.list-business li .btn .arrow:after { left: 20px; }
+.list-business li .btn .arrow:after { left: 25px; width: 5px; top: -2px; }
+
+/*----sec-recruit-------------------------------------------------*/
+.sec-recruit {
+	padding: 100px 0;
+}
+.employeer-inner {
+	display: flex;
+}
+.employeer .director {
+	order: 1;
+	position: relative;
+	text-align: center;
+	width: 50%;
+}
+.employeer .director:before {
+	background: #EB031C;
+	content: "";
+	display: block;
+	height: 100%;
+	max-height: 325px;
+	width: 1000%;
+	position: absolute;
+	right: 14%;
+	bottom: 0;
+	z-index: -1;
+	transform: skew(31deg);
+}
+.employeer .director .box {
+	background: #f1f1f1;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 104px;
+	width: 240px;
+	position: absolute;
+	right: 45px;
+	bottom: 70px;
+	z-index: 10;
+}
+.employeer .director .box p {
+	font-size: 1.2rem;
+	width: 100%;
+}
+.employeer .director .box .name {
+	font-size: 2.2rem;
+	font-weight: bold;
+	margin-left: 10px;
+}
+.employeer .info {
+	padding-top: 25px;
+	order: 2;
+	width: 50%;
+}
+.employeer .info .ttl {
+	border-bottom: 1px solid #EB031C;
+	color: #EB031C;
+	font-size: 2.2rem;
+	font-weight: bold;
+	margin-bottom: 30px;
+	padding-bottom: 4px;
+}
+.employeer .info .txt {
+	font-size: 3rem;
+	line-height: 1.8;
+	margin-bottom: 65px;
+}
+.recruit-video {
+	background: #EEE;
+	padding: 100px 0;
+}
+.recruit-video .video { text-align: center; }
+.recruitment {
+	padding: 100px 0 0;
+}
+.recruitment .ttl {
+	font-size: 3.5rem;
+	font-weight: bold;
+	letter-spacing: 0.06em;
+	margin-bottom: 28px;
+	text-align: center;
+}
+.recruitment .list-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 1140px;
+	margin: 0 auto;
+	margin-bottom: 80px;
+}
+.recruitment .list-buttons li {
+	width: 50%;
+	padding: 10px;
+}
+.recruitment .list-buttons li a {
+	background: #333;
+	color: #FFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	font-weight: bold;
+	height: 110px;
+	max-width: 550px;
+	margin: 0 auto;
+	position: relative;
+	transition: all ease 0.25s;
+	text-decoration: none;
+}
+.recruitment .list-buttons li a .click {
+	background: url(../imgs/common/icon_arrow_01.png) no-repeat right bottom;
+	background-size: 60px 4px;
+	display: block;
+	font-size: 1.2rem;
+	letter-spacing: 0.1em;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 60px;
+}
+.recruitment .list-buttons li a > span { position: relative; z-index: 1; }
+.recruitment .list-buttons li a:after {
+	background: #EB031C;
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transform-origin: right top;
+	-ms-transform-origin: right top;
+	transform-origin: right top;
+	transform: scale(0,1);
+	-webkit-transition: -webkit-transform .3s;
+	transition: -webkit-transform .3s;
+	transition: transform .3s;
+	z-index: 0;
+}
+.recruitment .list-buttons li a:hover:after {
+	-webkit-transform-origin: left top;
+	-ms-transform-origin: left top;
+	transform-origin: left top;
+	-webkit-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	transform: scale(1,1);
+}
+.recruitment .list-banners {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -20px;
+}
+.recruitment .list-banners li {
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding-right: 20px;
+}
+
+/*----sec-interview-------------------------------------------------*/
+.sec-interview {
+	padding-bottom: 100px;
+}
+.head-interview {
+	background: #FFF;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: -125px;
+	padding: 70px 15px 35px;
+	position: relative;
+}
+.list-interviewers {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -4.76%;
+	margin-bottom: 60px;
+}
+.list-interviewers li {
+	background: #FFF;
+	border-radius: 8px;
+	box-shadow: 0 0 7px rgba(112, 112, 112 , 0.25);
+	overflow: hidden;
+	margin-right: 4.76%;
+	position: relative;
+	text-align: center;
+	width: 28.57%;
+}
+.list-interviewers li:nth-child(1) { transition-delay: 0s; }
+.list-interviewers li:nth-child(2) { transition-delay: 0.25s; }
+.list-interviewers li:nth-child(3) { transition-delay: 0.50s; }
+
+.list-interviewers li .box {
+	background: #333;
+	color: #FFF;
+	max-width: 204px;
+	padding: 12px 10px 12px 20px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	text-align: left;
+	width: 242px;
+	z-index: 1;
+}
+.list-interviewers li .box .position {
+	display: block;
+	font-size: 1.2rem;
+	font-weight: 400;
+	letter-spacing: -0.1em;
+}
+.list-interviewers li .box .name {
+	display: block;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.list-interviewers li .info {
+	padding: 35px 40px 40px;
+}
+.list-interviewers li .ttl {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.2rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.list-interviewers li .btn {
+	font-size: 1.3rem;
+	max-width: 250px;
+	height: 60px;
+}
+.list-interviewers li .btn .arrow { width: 15px; }
+.list-interviewers li .btn .arrow:after { left: 25px; width: 5px; top: -2px; }
+
+/*----sec-news-------------------------------------------------*/
+.sec-news {
+	padding-bottom: 120px;
+}

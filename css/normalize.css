@@ -139,4 +139,5 @@ form img, input, select { vertical-align:middle; }
 .center { text-align:center !important; }
 .left { text-align:left !important; }
 .right { text-align:right !important; }
+.pos-rel { position: relative; }
 /****************** end common ********************/

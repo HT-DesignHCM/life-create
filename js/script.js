@@ -3,16 +3,14 @@
 	/* jsAnchors
 	--------------------------------------------------*/
 	var jsAnchors = function(){
-		$('a[href^="#"]').on('click', function(event) {
+		$('a[href^="#"]:not(".tabs a")').on('click', function(event) {
 			var hash = '#' + $(this).attr('href').split('#')[1]
 			var element = $(hash)
 			if (element.length) {
 				event.preventDefault();
 				history.pushState(hash, undefined, hash)
-				$('html, body').animate({scrollTop: element.offset().top - 55}, 1000)
+				$('html, body').animate({scrollTop: element.offset().top}, 1000)
 			}
-
-			$('.navi').removeClass('on');
 		});
 	}
 	/* jsEffect
@@ -74,6 +72,9 @@
 			}
 		});
 	}
+
+	/* jsMenuFooter
+	--------------------------------------------------*/
 	var jsMenuFooter = function(){
 		$('.fnav-parent').click(function() {console.log('aa');
 			$(this).removeClass('active');
@@ -87,6 +88,32 @@
 		});
 	}
 
+	/* jsTabs
+	--------------------------------------------------*/
+	var jsTabs = function(){
+		$(".tabs a").click(function() {
+			
+			$('html, body').animate();
+
+			var elm = $(this);
+
+			elm.parent("li")
+				.siblings()
+				.removeClass("active");
+
+			elm.parent("li").addClass("active");
+
+			elm.parents(".tabs")
+				.next()
+				.children(".tab-box")
+				.hide();
+
+			var i = elm.parent("li").index();
+			$('.tab-contents > div:eq('+i+')').fadeIn();
+			return false;
+		});
+	}
+
 	/* Dom Ready
 	--------------------------------------------------*/
 	jsAnchors();
@@ -94,5 +121,6 @@
 	jsFixed();
 	jsMenu();
 	jsMenuFooter();
+	jsTabs();
 	$('.matchHeight').matchHeight();
 })(jQuery);
