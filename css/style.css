@@ -44,6 +44,7 @@ a:hover { color: #333; text-decoration: none; }
 	}	
 }
 @media screen and (max-width: 767px){
+	body { font-size: 1.4rem; }
 	.pc-only {
 		display: none!important;
 	}	
@@ -80,6 +81,10 @@ a:hover { color: #333; text-decoration: none; }
 }
 #logo {
 	width: auto;
+}
+@media screen and (max-width: 1400px){
+	/*#header { padding-left: 15px; }
+	#logo img { width: 200px; }*/
 }
 @media screen and (max-width: 767px){
 	#header {
@@ -147,6 +152,19 @@ a:hover { color: #333; text-decoration: none; }
 }
 #gnav .btn-entry .en { font-size: 2rem; text-transform: uppercase; }
 
+@media screen and (max-width: 1400px){
+	#gnav ul li { padding: 0 34px; }
+	/*#gnav ul { padding-right: 0; }
+	#gnav ul li { padding: 0 34px; }
+	#gnav ul li:not(:last-child):after {
+		right: 0;
+		transform: translateY(-50%) rotate(16deg);
+	}
+	#gnav .nav-item { height: 70px; }
+	#gnav .nav-item .en { font-size: 1.8rem; }
+	#gnav .btn-entry a { width: 160px; }
+	#gnav .btn-entry .en { font-size: 1.6rem; }*/
+}
 @media screen and (max-width: 767px){
 	#open-menu {
 		display: flex;
@@ -355,6 +373,7 @@ a:hover { color: #333; text-decoration: none; }
 #footer #fnav .fnav-item,
 #footer #fnav .fnav-item-other {
 	color: #FFF;
+	display: inline-block;
 }
 #footer #fnav .fnav-item:hover,
 #footer #fnav .fnav-item-other:hover {
@@ -410,6 +429,9 @@ a:hover { color: #333; text-decoration: none; }
 	font-size: 1rem;
 	padding: 10px 0;
 	text-align: center;
+}
+@media screen and (max-width: 1400px){
+	/*#footer #fnav .col-nav { width: 140px!important; }*/
 }
 @media screen and (max-width: 767px){
 	#footer .container {
@@ -533,6 +555,12 @@ a:hover { color: #333; text-decoration: none; }
 	font-weight: bold;
 }
 
+@media screen and (max-width: 767px){
+	.headline01 { margin-bottom: 25px; }
+	.headline01 .en { font-size: 3.25rem; }
+	.headline01 .jp { font-size: 1rem; }
+}
+
 /*==================================================================
 	Buttons setting
 ===================================================================*/
@@ -541,6 +569,7 @@ a:hover { color: #333; text-decoration: none; }
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-weight: bold;
 	height: 80px;
 	max-width: 430px;
 	margin: 0 auto;
@@ -622,6 +651,19 @@ a:hover { color: #333; text-decoration: none; }
 .btn.white:hover .arrow { background: #FFF; }
 .btn.white:hover .arrow:before, .btn.white:hover .arrow:after { background: #333; }
 
+@media screen and (max-width: 1400px){
+	/*.btn { max-width: 330px; }*/
+}
+@media screen and (max-width: 767px){
+	.btn {
+		font-size: 1.2rem;
+		height: 52px;
+		max-width: 265px;
+	}
+	.btn .arrow { width: 15px; }
+	.btn .arrow:after { left: 25px; width: 5px; top: -2px; }
+}
+
 /*==================================================================
 	Tabs news setting
 ===================================================================*/
@@ -661,6 +703,7 @@ a:hover { color: #333; text-decoration: none; }
 	margin-right: -1.47%;
 }
 .list-news li {
+	background: #EAEAEA;
 	margin: 0 1.47% 1.47% 0;
 	width: 23.53%;
 }
@@ -668,11 +711,10 @@ a:hover { color: #333; text-decoration: none; }
 .list-news .img img { transition: transform ease-in-out 0.5s; }
 .list-news :hover .img img { transform: scale(1.15); }
 .list-news .info {
-	background: #EAEAEA;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 122px;
+	min-height: 122px;
 	padding: 15px 15px 15px 30px;
 }
 .list-news .info .date {
@@ -683,4 +725,17 @@ a:hover { color: #333; text-decoration: none; }
 .list-news .info .ttl {
 	display: block;
 	font-weight: bold;
+}
+
+@media screen and (max-width: 767px){
+	.tabs li {
+		border-bottom: 1px solid #FFF;
+		width: 50%;
+	}
+	.tabs li:nth-child(even) { border-right: none; }
+	.tabs li:last-child { border-bottom: none; width: 100%; }
+	.tabs li a { font-size: 1.2rem; height: 40px; }
+	.tab-contents { padding: 10px 0 20px; }
+	.list-news li { width: 48.53%; }
+	.list-news .info { min-height: 60px; padding: 12px 15px; }
 }

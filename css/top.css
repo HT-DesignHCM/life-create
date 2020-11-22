@@ -40,8 +40,8 @@
 }
 @media screen and (max-width: 1400px){
 	#keyv .ttl {
-		bottom: 130px;
-		padding: 0 185px;
+		bottom: 20%;
+		padding: 0 10%;
 	}
 	#keyv .ttl img { width: 590px; }
 }
@@ -104,6 +104,12 @@
 	width: 100%;
 	padding: 100px 0;
 }
+@supports (-webkit-touch-callout: inherit) {
+	.philosophy {
+		background-attachment: scroll;
+	}
+}
+
 .list-philosophy li {
 	background: #FFF;
 	border-radius: 4px;
@@ -159,6 +165,71 @@
 	text-transform: uppercase;
 }
 .greeting .video { text-align: center; }
+
+@media screen and (max-width: 1400px){
+	/*.sec-about { padding-top: 50px; }
+	.txt-slogan { font-size: 3rem; margin-bottom: 60px; }
+	.target .img { width: 50%; }
+	.target .ttl { font-size: 2.8rem; margin-bottom: 18px; }
+	.target .ttl:after { margin-top: 10px; }
+	.target .txt { margin-bottom: 20px; }
+	.list-philosophy .ttl01 { margin-bottom: 20px; }
+	.list-philosophy .ttl02 { font-size: 3rem; margin-bottom: 10px; }
+	.list-philosophy li { max-width: 800px; padding: 20px 20px 30px 40px; }*/
+}
+@media screen and (max-width: 767px){
+	.sec-about { padding-top: 50px; }
+	.txt-slogan {
+		border-width: 1px;
+		font-size: 2rem;
+		margin: 0 15px 40px;
+		padding-top: 0;
+		padding-bottom: 15px;
+	}
+	.target {
+		display: block;
+		margin-bottom: 50px;
+		padding-right: 0!important;
+	}
+	.target .img, .target .info {
+		width: 100%;
+	}
+	.target .img {
+		margin-bottom: 30px;
+		padding-right: 18px;
+	}
+	.target .info { padding: 0 15px; }
+	.target .ttl {
+		font-size: 2rem;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	.target .ttl:after {
+		margin: 10px auto 0;
+		width: 40px;
+	}
+	.target .txt { margin-bottom: 25px; }
+	.philosophy { padding: 50px 0; }
+	.list-philosophy li {
+		margin-bottom: 15px;
+		padding: 25px;
+	}
+	.list-philosophy .ttl01 {
+		border-width: 1px;
+		margin-bottom: 15px;
+	}
+	.list-philosophy .ttl01 .jp { font-size: 2rem; }
+	.list-philosophy .ttl01 .en { font-size: 1rem; }
+	.list-philosophy .ttl02 {
+		font-size: 2rem;
+		margin-bottom: 12px;
+	}
+	.list-philosophy li:last-child .f22 { font-size: 1.6rem; }
+	.greeting { padding: 35px 0 50px; }
+	.greeting .ttl { margin-bottom: 20px; }
+	.greeting .ttl .jp { font-size: 1.75rem; }
+	.greeting .ttl .en { font-size: 1rem; }
+}
 
 /*----sec-business-------------------------------------------------*/
 .sec-business {
@@ -228,6 +299,26 @@
 .list-business li .btn .arrow { width: 15px; }
 .list-business li .btn .arrow:after { left: 25px; width: 5px; top: -2px; }
 
+@media screen and (max-width: 1400px){
+	/*.list-business li .ttl { font-size: 1.6rem; }
+	.list-business li .txt { font-size: 1.3rem; }*/
+}
+@media screen and (max-width: 767px){
+	.sec-business { padding: 50px 0; }
+	.sec-business:after { max-height: 330px; }
+	.list-business { margin-bottom: 15px; }
+	.list-business li {
+		margin-bottom: 15px;
+		padding: 10px 18px;
+		width: 48.592%;
+	}
+	.list-business li:before { width: 100px; height: 3px; }
+	.list-business li .img img { margin-bottom: 16px; }
+	.list-business li .ttl { font-size: 1.2rem; }
+	.list-business li .txt { font-size: 1.0rem; }
+	.list-business li .btn { height: 35px; font-size: 1.2rem; }
+}
+
 /*----sec-recruit-------------------------------------------------*/
 .sec-recruit {
 	padding: 100px 0;
@@ -257,8 +348,9 @@
 .employeer .director .box {
 	background: #f1f1f1;
 	border-radius: 4px;
+	box-shadow: 0 0px 7px rgba(112, 112, 112 , 0.25);
 	display: flex;
-	flex-direction: wrap;
+	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -267,6 +359,7 @@
 	position: absolute;
 	right: 45px;
 	bottom: 70px;
+	text-align: center;
 	z-index: 10;
 }
 .employeer .director .box p {
@@ -389,6 +482,50 @@
 	padding-right: 20px;
 }
 
+@media screen and (max-width: 767px){
+	.sec-recruit { padding: 50px 0; }
+	.employeer-inner { display: block; }
+	.employeer .info, .employeer .director { width: 100%; }
+	.employeer .info { margin-bottom: 15px; padding-top: 0; }
+	.employeer .info .ttl {
+		font-size: 1.5rem;
+		margin: 0 15px 15px;
+		text-align: center;
+	}
+	.employeer .info .txt {
+		font-size: 2rem;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.employeer .director { text-align: left; }
+	.employeer .director:before {
+		height: 165px;
+	}
+	.employeer .director img { width: 178px; }
+	.employeer .director .box {
+		height: 75px;
+		width: 172px;
+		right: 0;
+		bottom: 50px;
+	}
+	.employeer .director .box p { font-size: 1rem; }
+	.employeer .director .box .name { font-size: 1.75rem; }
+	.recruit-video { padding: 50px 0; }
+	.recruitment { padding-top: 20px; }
+	.recruitment .ttl { font-size: 2.5rem; margin-bottom: 15px; }
+	.recruitment .list-buttons { display: block; margin-bottom: 40px; }
+	.recruitment .list-buttons li { margin-bottom: 10px; padding: 0; width: 100%; }
+	.recruitment .list-buttons li a {
+		height: 52px;
+		font-size: 1.2rem;
+		justify-content: flex-start;
+		padding-left: 20px;
+	}
+	.recruitment .list-buttons li a .click { font-size: 1rem; width: 50px; }
+	.recruitment .list-banners { display: block; }
+	.recruitment .list-banners li { max-width: 100%; margin-bottom: 25px; }
+	.recruitment .list-banners li:last-child { margin-bottom: 0; }
+}
 /*----sec-interview-------------------------------------------------*/
 .sec-interview {
 	padding-bottom: 100px;
@@ -463,7 +600,25 @@
 .list-interviewers li .btn .arrow { width: 15px; }
 .list-interviewers li .btn .arrow:after { left: 25px; width: 5px; top: -2px; }
 
+@media screen and (max-width: 767px){
+	.sec-interview { padding-bottom: 50px; }
+	.head-interview {
+		margin-top: -25px;
+		padding: 35px 10px;
+	}
+	.list-interviewers { margin-bottom: 30px; }
+	.list-interviewers li { margin-bottom: 30px; width: 100%; }
+	.list-interviewers li:last-child { margin-bottom: 0; }
+	.list-interviewers li .box { padding: 8px 4px 6px 10px; }
+	.list-interviewers li .info { padding: 15px 15px 30px; }
+	.list-interviewers li .ttl { font-size: 1.8rem; }
+	.list-interviewers li .btn { height: 35px; font-size: 1.2rem; max-width: 135px; }
+}
+
 /*----sec-news-------------------------------------------------*/
 .sec-news {
 	padding-bottom: 120px;
+}
+@media screen and (max-width: 767px){
+	.sec-news { padding-bottom: 50px; }
 }
