@@ -116,6 +116,7 @@ form img, input, select { vertical-align:middle; }
 .pl40, .ph40, .pa40 { padding-left:  40px !important; }
 .strong, .bold { font-weight:bold; }
 .italic { font-style:italic; }
+.underline { text-decoration: underline; }
 .f10 { font-size:1.0rem; }
 .f11 { font-size:1.1rem; }
 .f12 { font-size:1.2rem; }

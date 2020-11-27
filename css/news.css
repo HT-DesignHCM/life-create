@@ -2,3 +2,85 @@
 /*==================================================================
 	Style setting
 ===================================================================*/
+.sec-news { padding: 120px 0; }
+
+.sec-detail {
+	background: #F2F2F2;
+	padding: 120px 0 100px;
+}
+.detail-block {
+	background: #FFF;
+	margin-bottom: 60px;
+	padding: 100px 120px 120px;
+}
+.detail-block .head-block {
+	border-left: 6px solid #EB0B1C;
+	margin-bottom: 50px;
+	padding: 4px 0 2px 30px;
+}
+.detail-block .head-block .ttl {
+	font-size: 3.5rem;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+.detail-block .head-block .date {
+	font-size: 1.2rem;
+}
+.detail-block .detail-photo {
+	margin-bottom: 40px;
+}
+.sec-detail .list-buttons {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+.sec-detail .list-buttons li {
+	max-width: 250px;
+	margin: 0 20px;
+	width: 100%;
+}
+.sec-detail .list-buttons a {
+	border: 1px solid #333;
+	color: #333;
+	font-size: 1.3rem;
+	height: 60px;
+	max-width: 250px;
+}
+.sec-detail .list-buttons a:hover { color: #FFF; }
+.sec-detail .list-buttons a:after { background: #333; }
+.sec-detail .list-buttons a .arrow { background: #333; width: 15px; }
+.sec-detail .list-buttons a:hover .arrow { background: #FFF; }
+.sec-detail .list-buttons a .arrow:before,
+.sec-detail .list-buttons a .arrow:after { background: #333; transition: all ease 0.25s; }
+.sec-detail .list-buttons a .arrow:after { width: 5px; top: -2px; left: 25px; }
+
+.sec-detail .list-buttons a.prev:after {
+	-webkit-transform-origin: left top;
+	-ms-transform-origin: left top;
+	transform-origin: left top;
+}
+.sec-detail .list-buttons a.prev:hover:after {
+	-webkit-transform-origin: right top;
+	-ms-transform-origin: right top;
+	transform-origin: right top;
+}
+.sec-detail .list-buttons a.prev .arrow { right: auto; left: 0; }
+.sec-detail .list-buttons a.prev .arrow:before { left: -15px; }
+.sec-detail .list-buttons a.prev .arrow:after { left: -15px; top: -2px; transform: rotate(-30deg); }
+
+@media screen and (max-width: 767px){
+	.sec-news { padding: 60px 0; }
+	.sec-detail { padding: 60px 0 50px; }
+	.sec-detail .headline01 .en { font-size: 2.6rem; }
+	.detail-block { margin-bottom: 30px; padding: 25px 15px 30px; }
+	.detail-block .head-block {
+		border-left-width: 3px;
+		margin-bottom: 25px;
+		padding: 4px 0 2px 12px;
+	}
+	.detail-block .head-block .ttl { font-size: 1.75rem; }
+	.detail-block .detail-photo { margin-bottom: 20px; }
+	.sec-detail .list-buttons { padding: 0 10px; }
+	.sec-detail .list-buttons li { margin: 0 5px; }
+	.sec-detail .list-buttons a { font-size: 1.1rem; height: 40px; }
+}

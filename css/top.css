@@ -67,7 +67,7 @@
 	line-height: 1.8;
 	max-width: 1082px;
 	margin: 0 auto 118px;
-	padding: 20px 0 0;
+	padding: 15px 0 0;
 	text-align: center;
 }
 .target {
@@ -79,10 +79,11 @@
 .target .info {
 	max-width: 630px;
 	width: 45%;
+	padding-right: 30px;
 }
 .target .ttl {
 	font-size: 4rem;
-	margin-bottom: 48px;
+	margin-bottom: 45px;
 }
 .target .ttl:after {
 	background: #EB031C;
@@ -90,9 +91,12 @@
 	display: block;
 	height: 2px;
 	width: 80px;
-	margin-top: 25px;
+	margin-top: 30px;
 }
-.target .txt { margin-bottom: 110px; }
+.target .txt {
+	line-height: 1.8;
+	margin-bottom: 60px;
+}
 .target .img {
 	width: 55%;
 }
@@ -106,7 +110,7 @@
 }
 @supports (-webkit-touch-callout: inherit) {
 	.philosophy {
-		background-attachment: scroll;
+		background-attachment: inherit;
 	}
 }
 
@@ -114,7 +118,7 @@
 	background: #FFF;
 	border-radius: 4px;
 	margin-bottom: 50px;
-	padding: 42px 70px 50px;
+	padding: 42px 70px 55px;
 	max-width: 1000px;
 }
 .list-philosophy li:nth-child(even) {
@@ -124,7 +128,7 @@
 .list-philosophy .ttl01 {
 	border-bottom: 2px solid #EB031C;
 	display: inline-block;
-	margin-bottom: 42px;
+	margin-bottom: 40px;
 }
 .list-philosophy .ttl01 .jp {
 	font-size: 2.5rem;
@@ -140,7 +144,14 @@
 }
 .list-philosophy .ttl02 {
 	font-size: 4rem;
-	margin-bottom: 26px;
+	margin-bottom: 30px;
+}
+.list-philosophy .txt {
+	line-height: 1.8;
+}
+.list-philosophy .corporate {
+	font-size: 2.2rem;
+	line-height: 1.8;
 }
 .greeting {
 	background: #EEE;
@@ -167,6 +178,14 @@
 .greeting .video { text-align: center; }
 
 @media screen and (max-width: 1400px){
+	.txt-slogan { font-size: 3rem; margin-bottom: 60px; }
+	.target .ttl { font-size: 3.5rem;}
+	.target .img { width: 50%; }
+	.list-philosophy li { max-width: 800px; padding: 20px 20px 30px 40px; }
+	.list-philosophy .ttl01 { margin-bottom: 20px; }
+	.list-philosophy .ttl02 { font-size: 3rem; margin-bottom: 20px; }
+	.list-philosophy .corporate { font-size: 1.8rem; }
+
 	/*.sec-about { padding-top: 50px; }
 	.txt-slogan { font-size: 3rem; margin-bottom: 60px; }
 	.target .img { width: 50%; }
@@ -224,7 +243,7 @@
 		font-size: 2rem;
 		margin-bottom: 12px;
 	}
-	.list-philosophy li:last-child .f22 { font-size: 1.6rem; }
+	.list-philosophy .corporate { font-size: 1.6rem; }
 	.greeting { padding: 35px 0 50px; }
 	.greeting .ttl { margin-bottom: 20px; }
 	.greeting .ttl .jp { font-size: 1.75rem; }
@@ -248,56 +267,6 @@
 	bottom: 0;
 	z-index: -1;
 }
-.list-business {
-	display: flex;
-	flex-wrap: wrap;
-	margin-right: -1.408%;
-	margin-bottom: 60px;
-}
-.list-business li {
-	background: #FFF;
-	border-radius: 8px;
-	box-shadow: 0 0 7px rgba(112, 112, 112 , 0.25);
-	margin-right: 1.408%;
-	padding-right: 20px;
-	padding: 38px 18px 48px;
-	position: relative;
-	text-align: center;
-	width: 23.592%;
-}
-.list-business li:nth-child(1) { transition-delay: 0s; }
-.list-business li:nth-child(2) { transition-delay: 0.25s; }
-.list-business li:nth-child(3) { transition-delay: 0.50s; }
-.list-business li:nth-child(4) { transition-delay: 0.75s; }
-.list-business li:before {
-	background: #EB031C;
-	content: "";
-	display: block;
-	height: 6px;
-	width: 170px;
-	margin: 0 auto;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-}
-.list-business li .img img {
-	margin-bottom: 32px;
-	width: 100%;
-}
-.list-business li .info { margin-bottom: 22px; }
-.list-business li .ttl {
-	font-size: 2.2rem;
-	font-weight: bold;
-	margin-bottom: 18px;
-}
-.list-business li .btn {
-	font-size: 1.3rem;
-	max-width: 250px;
-	height: 60px;
-}
-.list-business li .btn .arrow { width: 15px; }
-.list-business li .btn .arrow:after { left: 25px; width: 5px; top: -2px; }
 
 @media screen and (max-width: 1400px){
 	/*.list-business li .ttl { font-size: 1.6rem; }
@@ -306,226 +275,8 @@
 @media screen and (max-width: 767px){
 	.sec-business { padding: 50px 0; }
 	.sec-business:after { max-height: 330px; }
-	.list-business { margin-bottom: 15px; }
-	.list-business li {
-		margin-bottom: 15px;
-		padding: 10px 18px;
-		width: 48.592%;
-	}
-	.list-business li:before { width: 100px; height: 3px; }
-	.list-business li .img img { margin-bottom: 16px; }
-	.list-business li .ttl { font-size: 1.2rem; }
-	.list-business li .txt { font-size: 1.0rem; }
-	.list-business li .btn { height: 35px; font-size: 1.2rem; }
 }
 
-/*----sec-recruit-------------------------------------------------*/
-.sec-recruit {
-	padding: 100px 0;
-}
-.employeer-inner {
-	display: flex;
-}
-.employeer .director {
-	order: 1;
-	position: relative;
-	text-align: center;
-	width: 50%;
-}
-.employeer .director:before {
-	background: #EB031C;
-	content: "";
-	display: block;
-	height: 100%;
-	max-height: 325px;
-	width: 1000%;
-	position: absolute;
-	right: 14%;
-	bottom: 0;
-	z-index: -1;
-	transform: skew(31deg);
-}
-.employeer .director .box {
-	background: #f1f1f1;
-	border-radius: 4px;
-	box-shadow: 0 0px 7px rgba(112, 112, 112 , 0.25);
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 104px;
-	width: 240px;
-	position: absolute;
-	right: 45px;
-	bottom: 70px;
-	text-align: center;
-	z-index: 10;
-}
-.employeer .director .box p {
-	font-size: 1.2rem;
-	width: 100%;
-}
-.employeer .director .box .name {
-	font-size: 2.2rem;
-	font-weight: bold;
-	margin-left: 10px;
-}
-.employeer .info {
-	padding-top: 25px;
-	order: 2;
-	width: 50%;
-}
-.employeer .info .ttl {
-	border-bottom: 1px solid #EB031C;
-	color: #EB031C;
-	font-size: 2.2rem;
-	font-weight: bold;
-	margin-bottom: 30px;
-	padding-bottom: 4px;
-}
-.employeer .info .txt {
-	font-size: 3rem;
-	line-height: 1.8;
-	margin-bottom: 65px;
-}
-.recruit-video {
-	background: #EEE;
-	padding: 100px 0;
-}
-.recruit-video .video { text-align: center; }
-.recruitment {
-	padding: 100px 0 0;
-}
-.recruitment .ttl {
-	font-size: 3.5rem;
-	font-weight: bold;
-	letter-spacing: 0.06em;
-	margin-bottom: 28px;
-	text-align: center;
-}
-.recruitment .list-buttons {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	max-width: 1140px;
-	margin: 0 auto;
-	margin-bottom: 80px;
-}
-.recruitment .list-buttons li {
-	width: 50%;
-	padding: 10px;
-}
-.recruitment .list-buttons li a {
-	background: #333;
-	color: #FFF;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 2rem;
-	font-weight: bold;
-	height: 110px;
-	max-width: 550px;
-	margin: 0 auto;
-	position: relative;
-	transition: all ease 0.25s;
-	text-decoration: none;
-}
-.recruitment .list-buttons li a .click {
-	background: url(../imgs/common/icon_arrow_01.png) no-repeat right bottom;
-	background-size: 60px 4px;
-	display: block;
-	font-size: 1.2rem;
-	letter-spacing: 0.1em;
-	position: absolute;
-	right: 20px;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 60px;
-}
-.recruitment .list-buttons li a > span { position: relative; z-index: 1; }
-.recruitment .list-buttons li a:after {
-	background: #EB031C;
-	content: "";
-	display: block;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	-webkit-transform-origin: right top;
-	-ms-transform-origin: right top;
-	transform-origin: right top;
-	transform: scale(0,1);
-	-webkit-transition: -webkit-transform .3s;
-	transition: -webkit-transform .3s;
-	transition: transform .3s;
-	z-index: 0;
-}
-.recruitment .list-buttons li a:hover:after {
-	-webkit-transform-origin: left top;
-	-ms-transform-origin: left top;
-	transform-origin: left top;
-	-webkit-transform: scale(1,1);
-	-ms-transform: scale(1,1);
-	transform: scale(1,1);
-}
-.recruitment .list-banners {
-	display: flex;
-	flex-wrap: wrap;
-	margin-right: -20px;
-}
-.recruitment .list-banners li {
-	flex: 0 0 50%;
-	max-width: 50%;
-	padding-right: 20px;
-}
-
-@media screen and (max-width: 767px){
-	.sec-recruit { padding: 50px 0; }
-	.employeer-inner { display: block; }
-	.employeer .info, .employeer .director { width: 100%; }
-	.employeer .info { margin-bottom: 15px; padding-top: 0; }
-	.employeer .info .ttl {
-		font-size: 1.5rem;
-		margin: 0 15px 15px;
-		text-align: center;
-	}
-	.employeer .info .txt {
-		font-size: 2rem;
-		margin-bottom: 30px;
-		text-align: center;
-	}
-	.employeer .director { text-align: left; }
-	.employeer .director:before {
-		height: 165px;
-	}
-	.employeer .director img { width: 178px; }
-	.employeer .director .box {
-		height: 75px;
-		width: 172px;
-		right: 0;
-		bottom: 50px;
-	}
-	.employeer .director .box p { font-size: 1rem; }
-	.employeer .director .box .name { font-size: 1.75rem; }
-	.recruit-video { padding: 50px 0; }
-	.recruitment { padding-top: 20px; }
-	.recruitment .ttl { font-size: 2.5rem; margin-bottom: 15px; }
-	.recruitment .list-buttons { display: block; margin-bottom: 40px; }
-	.recruitment .list-buttons li { margin-bottom: 10px; padding: 0; width: 100%; }
-	.recruitment .list-buttons li a {
-		height: 52px;
-		font-size: 1.2rem;
-		justify-content: flex-start;
-		padding-left: 20px;
-	}
-	.recruitment .list-buttons li a .click { font-size: 1rem; width: 50px; }
-	.recruitment .list-banners { display: block; }
-	.recruitment .list-banners li { max-width: 100%; margin-bottom: 25px; }
-	.recruitment .list-banners li:last-child { margin-bottom: 0; }
-}
 /*----sec-interview-------------------------------------------------*/
 .sec-interview {
 	padding-bottom: 100px;
@@ -613,12 +364,4 @@
 	.list-interviewers li .info { padding: 15px 15px 30px; }
 	.list-interviewers li .ttl { font-size: 1.8rem; }
 	.list-interviewers li .btn { height: 35px; font-size: 1.2rem; max-width: 135px; }
-}
-
-/*----sec-news-------------------------------------------------*/
-.sec-news {
-	padding-bottom: 120px;
-}
-@media screen and (max-width: 767px){
-	.sec-news { padding-bottom: 50px; }
 }

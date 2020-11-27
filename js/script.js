@@ -114,6 +114,31 @@
 		});
 	}
 
+	/* jsMainImage
+	--------------------------------------------------*/
+	var jsMainImage = function(){
+		$('.main-page').each(function() {
+			var imgSrc = $(this).find('img').attr('src');
+			$(this).css('background', 'url("' + imgSrc + '")');
+			$(this).find('img').hide();
+		});
+	}
+
+	/* jsAccodion
+	--------------------------------------------------*/
+	var jsAccodion = function(){
+		$('.open-acc').click (function(){    
+			$(this).removeClass('active');
+			if($(this).next().css('display') == 'none') {
+				$(this).next().slideDown(200);
+				$(this).addClass('active');
+			}
+			else {
+				$(this).next().slideUp(200);
+			}
+		});
+	}
+
 	/* Dom Ready
 	--------------------------------------------------*/
 	jsAnchors();
@@ -122,5 +147,7 @@
 	jsMenu();
 	jsMenuFooter();
 	jsTabs();
+	jsMainImage();
+	jsAccodion();
 	$('.matchHeight').matchHeight();
 })(jQuery);
